@@ -15,7 +15,7 @@
     "tag": "Планирование",
     "date": "15 марта 2026",
     "file": "planning-pregnancy.html",
-    "image": ""
+    "image": "assets/cover-planning.jpg"
   },
   {
     "id": 2,
@@ -24,7 +24,7 @@
     "tag": "Беременность",
     "date": "8 марта 2026",
     "file": "first-trimester.html",
-    "image": ""
+    "image": "assets/cover-trimester.jpg"
   },
   {
     "id": 3,
@@ -33,6 +33,6 @@
     "tag": "Диагностика",
     "date": "1 марта 2026",
     "file": "ultrasound-myths.html",
-    "image": ""
+    "image": "assets/cover-ultrasound.jpg"
   }
 ]
