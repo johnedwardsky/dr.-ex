@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Карта сайта — Доктор Дубенец-Попова</title>
+  <meta name="description" content="Карта сайта dubenets.pro — все разделы и страницы информационного ресурса врача акушера-гинеколога Светланы Дубенец-Поповой.">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .sitemap-page {
+      padding: 120px 0 80px;
+      min-height: 80vh;
+    }
+    .sitemap-page .container {
+      max-width: 960px;
+    }
+    .sitemap-page h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .sitemap-intro {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-bottom: 56px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Grid layout */
+    .sitemap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    /* Section card */
+    .sitemap-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .sitemap-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+
+    .sitemap-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .sitemap-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--gold-light);
+      border: 1px solid var(--gold-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .sitemap-card-title {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .sitemap-card-desc {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+
+    /* Links list */
+    .sitemap-links {
+      list-style: none;
+    }
+    .sitemap-links li {
+      margin-bottom: 6px;
+    }
+    .sitemap-links a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: 6px 8px;
+      border-radius: 8px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .sitemap-links a:hover {
+      background: var(--gold-light);
+      color: var(--accent-dark);
+    }
+    .sitemap-links a::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+    .sitemap-links .sitemap-sub {
+      padding-left: 24px;
+      font-size: 0.82rem;
+    }
+    .sitemap-links .sitemap-sub::before {
+      background: var(--accent-light);
+      width: 4px;
+      height: 4px;
+    }
+
+    /* Main page card — wider */
+    .sitemap-card.card-main {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      background: linear-gradient(135deg, var(--gold-light), transparent);
+      border-color: var(--gold-border);
+    }
+    .sitemap-card.card-main .sitemap-card-header {
+      flex-shrink: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .sitemap-card.card-main .sitemap-card-title { font-size: 1.25rem; }
+    .sitemap-card.card-main .sitemap-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .sitemap-card.card-main .sitemap-links li {
+      margin-bottom: 0;
+    }
+
+    /* Robots note */
+    .sitemap-note {
+      margin-top: 48px;
+      padding: 20px 24px;
+      background: var(--gold-light);
+      border: 1px solid var(--gold-border);
+      border-radius: 12px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .sitemap-note strong { color: var(--accent-dark); }
+    .sitemap-note a { color: var(--gold); text-decoration: none; }
+    .sitemap-note a:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .sitemap-card.card-main {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .sitemap-card.card-main .sitemap-card-header {
+        padding-bottom: 16px;
+        border-bottom: 1px solid var(--border);
+        margin-bottom: 16px;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="site-nav"></div>
+
+  <main class="sitemap-page">
+    <div class="container">
+
+      <h1>Карта сайта</h1>
+      <p class="sitemap-intro">
+        Все разделы и страницы сайта <strong>dubenets.pro</strong> — информационного ресурса врача акушера-гинеколога Светланы Дубенец-Поповой.
+      </p>
+
+      <div class="sitemap-grid">
+
+        <!-- Главная -->
+        <div class="sitemap-card card-main">
+          <div class="sitemap-card-header">
+            <div class="sitemap-icon">🏠</div>
+            <div>
+              <div class="sitemap-card-title">Главная страница</div>
+              <div class="sitemap-card-desc">dubenets.pro</div>
+            </div>
+          </div>
+          <ul class="sitemap-links">
+            <li><a href="index.html">Главная — dubenets.pro</a></li>
+          </ul>
+        </div>
+
+        <!-- Обо мне -->
+        <div class="sitemap-card">
+          <div class="sitemap-card-header">
+            <div class="sitemap-icon">👩‍⚕️</div>
+            <div>
+              <div class="sitemap-card-title">Обо мне</div>
+              <div class="sitemap-card-desc">Опыт, образование, философия</div>
+            </div>
+          </div>
+          <ul class="sitemap-links">
+            <li><a href="about.html">Страница «Обо мне»</a></li>
+            <li><a href="about.html#education" class="sitemap-sub">Образование и квалификация</a></li>
+            <li><a href="about.html#experience" class="sitemap-sub">24 года практики</a></li>
+            <li><a href="about.html#philosophy" class="sitemap-sub">Философия и подход</a></li>
+          </ul>
+        </div>
+
+        <!-- Направления -->
+        <div class="sitemap-card">
+          <div class="sitemap-card-header">
+            <div class="sitemap-icon">🌿</div>
+            <div>
+              <div class="sitemap-card-title">Направления</div>
+              <div class="sitemap-card-desc">Виды сопровождения</div>
+            </div>
+          </div>
+          <ul class="sitemap-links">
+            <li><a href="services.html">Все направления</a></li>
+            <li><a href="services.html#planning" class="sitemap-sub">Планирование беременности</a></li>
+            <li><a href="services.html#pregnancy" class="sitemap-sub">Ведение беременности</a></li>
+            <li><a href="services.html#postpartum" class="sitemap-sub">Послеродовое восстановление</a></li>
+            <li><a href="services.html#coaching" class="sitemap-sub">Коучинг и поддержка</a></li>
+          </ul>
+        </div>
+
+        <!-- Блог -->
+        <div class="sitemap-card">
+          <div class="sitemap-card-header">
+            <div class="sitemap-icon">📖</div>
+            <div>
+              <div class="sitemap-card-title">Блог</div>
+              <div class="sitemap-card-desc">Статьи и рекомендации</div>
+            </div>
+          </div>
+          <ul class="sitemap-links">
+            <li><a href="blog.html">Все статьи блога</a></li>
+            <li><a href="blog/steps-to-motherhood.html" class="sitemap-sub">5 шагов к осознанному материнству</a></li>
+            <li><a href="blog/planning-pregnancy.html" class="sitemap-sub">Когда начинать планировать беременность</a></li>
+          </ul>
+        </div>
+
+        <!-- Отзывы -->
+        <div class="sitemap-card">
+          <div class="sitemap-card-header">
+            <div class="sitemap-icon">⭐</div>
+            <div>
+              <div class="sitemap-card-title">Отзывы</div>
+              <div class="sitemap-card-desc">Отзывы пациентов</div>
+            </div>
+          </div>
+          <ul class="sitemap-links">
+            <li><a href="reviews.html">Страница отзывов</a></li>
+            <li><a href="reviews.html#leave-review" class="sitemap-sub">Оставить отзыв</a></li>
+          </ul>
+        </div>
+
+        <!-- Контакты -->
+        <div class="sitemap-card">
+          <div class="sitemap-card-header">
+            <div class="sitemap-icon">✉️</div>
+            <div>
+              <div class="sitemap-card-title">Связаться</div>
+              <div class="sitemap-card-desc">Заявки и контакты</div>
+            </div>
+          </div>
+          <ul class="sitemap-links">
+            <li><a href="contact.html">Форма обратной связи</a></li>
+            <li><a href="https://t.me/ginecologicc" target="_blank" rel="noopener" class="sitemap-sub">Telegram-канал</a></li>
+          </ul>
+        </div>
+
+        <!-- Юридические -->
+        <div class="sitemap-card">
+          <div class="sitemap-card-header">
+            <div class="sitemap-icon">📋</div>
+            <div>
+              <div class="sitemap-card-title">Правовые документы</div>
+              <div class="sitemap-card-desc">Политика и условия</div>
+            </div>
+          </div>
+          <ul class="sitemap-links">
+            <li><a href="privacy.html">Политика конфиденциальности</a></li>
+            <li><a href="sitemap.html">Карта сайта</a></li>
+            <li><a href="sitemap.xml" class="sitemap-sub">XML-карта для поисковиков</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="sitemap-note">
+        <strong>Для поисковых систем:</strong> XML-версия карты сайта доступна по адресу 
+        <a href="sitemap.xml">dubenets.pro/sitemap.xml</a> и предназначена для индексации 
+        страниц сайта поисковыми роботами Google, Яндекс и других систем.<br><br>
+        Все материалы сайта носят информационный характер. 
+        <strong>Есть противопоказания. Необходима консультация специалиста.</strong>
+      </div>
+
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
