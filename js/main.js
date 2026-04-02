@@ -275,17 +275,27 @@ function initReviewForm() {
   if (form) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      const origText = btn?.textContent;
+      if (btn) { btn.textContent = 'Отправка...'; btn.disabled = true; }
+
       const name = document.getElementById('reviewName')?.value || '';
       const rating = ratingInput?.value || '5';
       const service = document.getElementById('reviewService')?.selectedOptions[0]?.text || '';
       const text = document.getElementById('reviewText')?.value || '';
-      const stars = '⭐'.repeat(parseInt(rating));
+      const starsEmoji = '⭐'.repeat(parseInt(rating));
 
-      const msg = `📝 *Новый отзыв*\n\n👤 *Имя:* ${name}\n${stars} (${rating}/5)\n📋 *Направление:* ${service}\n\n💬 ${text}`;
+      const msg = `📝 *Новый отзыв*\n\n👤 *Имя:* ${name}\n${starsEmoji} (${rating}/5)\n📋 *Направление:* ${service}\n\n💬 ${text}`;
 
-      await sendToTelegram(msg);
-      form.style.display = 'none';
-      if (success) success.style.display = 'block';
+      const ok = await sendToTelegram(msg);
+
+      if (ok) {
+        form.style.display = 'none';
+        if (success) success.style.display = 'block';
+      } else {
+        alert('Ошибка отправки. Попробуйте написать напрямую в Telegram @ginecologicc');
+        if (btn) { btn.textContent = origText; btn.disabled = false; }
+      }
     });
   }
 }
