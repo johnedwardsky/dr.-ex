@@ -273,10 +273,33 @@ function initReviewForm() {
   });
 
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      form.style.display = 'none';
-      if (success) success.style.display = 'block';
+      const btn = form.querySelector('button[type="submit"]');
+      const origText = btn?.textContent;
+      if (btn) { btn.textContent = 'Отправка...'; btn.disabled = true; }
+
+      const name = document.getElementById('reviewName')?.value || '';
+      const rating = ratingInput?.value || '5';
+      const service = document.getElementById('reviewService')?.selectedOptions[0]?.text || '';
+      const text = document.getElementById('reviewText')?.value || '';
+
+      try {
+        const res = await fetch('/api/send', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, contact: `${rating}/5`, topic: service, message: text, type: 'review' })
+        });
+        if (res.ok) {
+          form.style.display = 'none';
+          if (success) success.style.display = 'block';
+        } else {
+          throw new Error('Server error');
+        }
+      } catch {
+        alert('Ошибка отправки. Напишите напрямую в Telegram @ginecologicc');
+        if (btn) { btn.textContent = origText; btn.disabled = false; }
+      }
     });
   }
 }
@@ -287,9 +310,33 @@ function initContactForm() {
   const success = document.getElementById('formSuccess');
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    form.style.display = 'none';
-    if (success) success.style.display = 'block';
+    const btn = form.querySelector('button[type="submit"]');
+    const origText = btn?.textContent;
+    if (btn) { btn.textContent = 'Отправка...'; btn.disabled = true; }
+
+    const name = document.getElementById('name')?.value || '';
+    const contact = document.getElementById('messenger')?.value || '';
+    const topic = document.getElementById('topic')?.selectedOptions[0]?.text || '';
+    const message = document.getElementById('message')?.value || '';
+
+    try {
+      const res = await fetch('/api/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, contact, topic, message, type: 'contact' })
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        if (success) success.style.display = 'block';
+      } else {
+        throw new Error('Server error');
+      }
+    } catch {
+      alert('Ошибка отправки. Напишите напрямую в Telegram @ginecologicc');
+      if (btn) { btn.textContent = origText; btn.disabled = false; }
+    }
   });
 }
+
