@@ -285,10 +285,18 @@ function initReviewForm() {
       const text = document.getElementById('reviewText')?.value || '';
 
       try {
-        const res = await fetch('/api/send', {
+        const res = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name, contact: `${rating}/5`, topic: service, message: text, type: 'review' })
+          body: JSON.stringify({
+            access_key: 'bd4bc5a8-6b07-4e1c-b560-7be598b534bc',
+            subject: '⭐ Новый отзыв с dubenets.pro',
+            from_name: 'dubenets.pro',
+            name: name,
+            rating: rating + '/5',
+            service: service,
+            message: text
+          })
         });
         if (res.ok) {
           form.style.display = 'none';
@@ -322,10 +330,18 @@ function initContactForm() {
     const message = document.getElementById('message')?.value || '';
 
     try {
-      const res = await fetch('/api/send', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, contact, topic, message, type: 'contact' })
+        body: JSON.stringify({
+          access_key: 'bd4bc5a8-6b07-4e1c-b560-7be598b534bc',
+          subject: '📩 Новая заявка с dubenets.pro',
+          from_name: 'dubenets.pro',
+          name: name,
+          contact: contact,
+          topic: topic,
+          message: message
+        })
       });
       if (res.ok) {
         form.style.display = 'none';
