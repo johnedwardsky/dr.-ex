@@ -273,29 +273,10 @@ function initReviewForm() {
   });
 
   if (form) {
-    form.addEventListener('submit', async (e) => {
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const btn = form.querySelector('button[type="submit"]');
-      const origText = btn?.textContent;
-      if (btn) { btn.textContent = 'Отправка...'; btn.disabled = true; }
-
-      const name = document.getElementById('reviewName')?.value || '';
-      const rating = ratingInput?.value || '5';
-      const service = document.getElementById('reviewService')?.selectedOptions[0]?.text || '';
-      const text = document.getElementById('reviewText')?.value || '';
-      const starsEmoji = '⭐'.repeat(parseInt(rating));
-
-      const msg = `📝 *Новый отзыв*\n\n👤 *Имя:* ${name}\n${starsEmoji} (${rating}/5)\n📋 *Направление:* ${service}\n\n💬 ${text}`;
-
-      const ok = await sendToTelegram(msg);
-
-      if (ok) {
-        form.style.display = 'none';
-        if (success) success.style.display = 'block';
-      } else {
-        alert('Ошибка отправки. Попробуйте написать напрямую в Telegram @ginecologicc');
-        if (btn) { btn.textContent = origText; btn.disabled = false; }
-      }
+      form.style.display = 'none';
+      if (success) success.style.display = 'block';
     });
   }
 }
@@ -306,49 +287,9 @@ function initContactForm() {
   const success = document.getElementById('formSuccess');
   if (!form) return;
 
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]');
-    const origText = btn?.textContent;
-    if (btn) { btn.textContent = 'Отправка...'; btn.disabled = true; }
-
-    const name = document.getElementById('name')?.value || '';
-    const messenger = document.getElementById('messenger')?.value || '';
-    const topic = document.getElementById('topic')?.selectedOptions[0]?.text || '';
-    const message = document.getElementById('message')?.value || 'Не указано';
-
-    const msg = `📩 *Новая заявка с сайта*\n\n👤 *Имя:* ${name}\n📱 *Контакт:* ${messenger}\n📋 *Тема:* ${topic}\n\n💬 *Сообщение:*\n${message}`;
-
-    const ok = await sendToTelegram(msg);
-
-    if (ok) {
-      form.style.display = 'none';
-      if (success) success.style.display = 'block';
-    } else {
-      alert('Ошибка отправки. Попробуйте написать напрямую в Telegram @ginecologicc');
-      if (btn) { btn.textContent = origText; btn.disabled = false; }
-    }
+    form.style.display = 'none';
+    if (success) success.style.display = 'block';
   });
-}
-
-/* ---------- Telegram Bot API ---------- */
-async function sendToTelegram(text) {
-  const TOKEN = '8745212178:AAHH6V_Kydp59kvkKFTPJsZLEz07IxodEs4';
-  const CHAT_ID = '801183174';
-  const url = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
-  try {
-    const res = await fetch(url, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        chat_id: CHAT_ID,
-        text: text,
-        parse_mode: 'Markdown'
-      })
-    });
-    return res.ok;
-  } catch (e) {
-    console.error('Telegram send error:', e);
-    return false;
-  }
 }
