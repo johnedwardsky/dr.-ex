@@ -285,17 +285,15 @@ function initReviewForm() {
       const text = document.getElementById('reviewText')?.value || '';
 
       try {
-        const res = await fetch('https://api.web3forms.com/submit', {
+        const res = await fetch('https://functions.yandexcloud.net/d4e6su068aeoo4998et7', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            access_key: 'bd4bc5a8-6b07-4e1c-b560-7be598b534bc',
-            subject: '⭐ Новый отзыв с dubenets.pro',
-            from_name: 'dubenets.pro',
+            type: 'review',
             name: name,
-            rating: rating + '/5',
+            rating: rating,
             service: service,
-            message: text
+            text: text
           })
         });
         if (res.ok) {
@@ -330,13 +328,11 @@ function initContactForm() {
     const message = document.getElementById('message')?.value || '';
 
     try {
-      const res = await fetch('https://api.web3forms.com/submit', {
+      const res = await fetch('https://functions.yandexcloud.net/d4e6su068aeoo4998et7', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          access_key: 'bd4bc5a8-6b07-4e1c-b560-7be598b534bc',
-          subject: '📩 Новая заявка с dubenets.pro',
-          from_name: 'dubenets.pro',
+          type: 'contact',
           name: name,
           contact: contact,
           topic: topic,
