@@ -27,48 +27,23 @@
   <link rel="preload" href="assets/doctor-hero.jpg" as="image">
   <link rel="preload" href="styles/main.css" as="style">
 
-  <!-- Schema.org: Physician -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Physician",
-    "name": "Дубенец-Попова Светлана",
-    "alternateName": "Доктор Дубенец-Попова",
-    "description": "Врач акушер-гинеколог, кандидат медицинских наук, семейный коуч ICF. 24 года опыта, более 9000 родов. Ведение беременности в Москве и онлайн.",
-    "url": "https://dubenets.pro",
-    "image": "https://dubenets.pro/assets/doctor.jpg",
-    "telephone": "",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Москва",
-      "addressCountry": "RU"
-    },
-    "medicalSpecialty": "Obstetrics and Gynecology",
-    "availableService": [
-      {"@type": "MedicalTherapy", "name": "Ведение беременности"},
-      {"@type": "MedicalTherapy", "name": "Планирование беременности"},
-      {"@type": "MedicalTherapy", "name": "Послеродовое сопровождение"},
-      {"@type": "MedicalTherapy", "name": "Онлайн консультация гинеколога"}
-    ],
-    "sameAs": [
-      "https://t.me/ginecologicc"
-    ]
-  }
-  </script>
-
 
   <link rel="stylesheet" href="styles/main.css">
 
   <!-- JSON-LD: Physician -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Physician",
-    "name": "Дубенец-Попова",
-    "givenName": "Доктор",
+    "name": "Светлана Дубенец-Попова",
+    "alternateName": "Доктор Дубенец-Попова",
     "description": "Врач акушер-гинеколог, кандидат медицинских наук, эксперт УЗ-диагностики, сертифицированный семейный коуч PCC ICF. Ведение беременности в Москве и онлайн, планирование беременности, послеродовое сопровождение, коучинг по семейным отношениям.",
     "url": "https://dubenets.pro/",
-    "medicalSpecialty": ["Obstetrics", "Gynecology"],
+    "medicalSpecialty": [
+      "https://schema.org/Gynecologic",
+      "https://schema.org/Midwifery"
+    ],
     "knowsAbout": [
       "ведение беременности",
       "планирование беременности",
@@ -97,7 +72,7 @@
         "description": "Поддержка в послеродовом периоде: восстановление, помощь при послеродовой депрессии, грудное вскармливание"
       },
       {
-        "@type": "Service",
+        "@type": "MedicalProcedure",
         "name": "Семейный коучинг",
         "description": "Коуч по семейным отношениям PCC ICF: работа с партнёрскими отношениями в семье, подготовка к родительству"
       }
