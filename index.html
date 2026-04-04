@@ -24,9 +24,38 @@
   <!-- Performance: Resource Hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="https://api.telegram.org">
   <link rel="preload" href="assets/doctor-hero.jpg" as="image">
   <link rel="preload" href="styles/main.css" as="style">
+
+  <!-- Schema.org: Physician -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Дубенец-Попова Светлана",
+    "alternateName": "Доктор Дубенец-Попова",
+    "description": "Врач акушер-гинеколог, кандидат медицинских наук, семейный коуч ICF. 24 года опыта, более 9000 родов. Ведение беременности в Москве и онлайн.",
+    "url": "https://dubenets.pro",
+    "image": "https://dubenets.pro/assets/doctor.jpg",
+    "telephone": "",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Москва",
+      "addressCountry": "RU"
+    },
+    "medicalSpecialty": "Obstetrics and Gynecology",
+    "availableService": [
+      {"@type": "MedicalTherapy", "name": "Ведение беременности"},
+      {"@type": "MedicalTherapy", "name": "Планирование беременности"},
+      {"@type": "MedicalTherapy", "name": "Послеродовое сопровождение"},
+      {"@type": "MedicalTherapy", "name": "Онлайн консультация гинеколога"}
+    ],
+    "sameAs": [
+      "https://t.me/ginecologicc"
+    ]
+  }
+  </script>
+
 
   <link rel="stylesheet" href="styles/main.css">
 
