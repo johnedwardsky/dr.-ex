@@ -718,8 +718,7 @@ p {
 .philosophy-text .quote {
   font-family: var(--font-heading);
   font-size: clamp(1.3rem, 2.5vw, 1.8rem);
-  font-weight: 600;
-  font-style: normal;
+  font-style: italic;
   color: var(--accent-dark);
   line-height: 1.5;
   margin-bottom: 24px;
