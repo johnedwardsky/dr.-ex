@@ -306,7 +306,7 @@ p {
 .mobile-sublinks {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 6px;
   width: 100%;
   text-align: center;
   margin-top: -12px;
@@ -314,7 +314,7 @@ p {
 }
 
 .mobile-sublinks a {
-  font-size: 1rem !important;
+  font-size: 0.9rem !important;
   color: var(--text-secondary) !important;
   font-family: var(--font-body) !important;
   font-weight: 400 !important;
@@ -457,7 +457,7 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 28px;
+  gap: 16px;
 }
 
 .nav-mobile.open {
@@ -466,7 +466,7 @@ p {
 
 .nav-mobile a {
   font-family: var(--font-heading);
-  font-size: 1.6rem;
+  font-size: 1.25rem;
   color: var(--text-primary);
   font-weight: 500;
 }
@@ -1267,7 +1267,7 @@ p {
   }
 
   .floating-cta {
-    display: flex;
+    display: none;
   }
 
   .hero {
