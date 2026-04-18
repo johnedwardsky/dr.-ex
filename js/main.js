@@ -37,8 +37,11 @@ function injectNav() {
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="${b}./" class="nav-logo">
-        <span class="logo-name">Доктор <em>Дубенец-Попова</em></span>
-        <span class="logo-tagline">Забота и внимание к женскому здоровью</span>
+        <img src="${b}assets/logo.svg" alt="Логотип Дубенец-Попова" class="logo-mark">
+        <div class="logo-text">
+          <span class="logo-name">Доктор <em>Дубенец-Попова</em></span>
+          <span class="logo-tagline">Забота и внимание к женскому здоровью</span>
+        </div>
       </a>
       <ul class="nav-links">
         <li><a href="${b}./">Главная</a></li>
@@ -91,8 +94,11 @@ function injectFooter() {
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="${b}./" class="nav-logo">
-            <span class="logo-name">Доктор <em>Дубенец-Попова</em></span>
-            <span class="logo-tagline">Забота и внимание к женскому здоровью</span>
+            <img src="${b}assets/logo.svg" alt="Логотип Дубенец-Попова" class="logo-mark">
+            <div class="logo-text">
+              <span class="logo-name">Доктор <em>Дубенец-Попова</em></span>
+              <span class="logo-tagline">Забота и внимание к женскому здоровью</span>
+            </div>
           </a>
           <p>Информационный ресурс врача акушера-гинеколога. Материалы носят просветительский характер и не заменяют консультацию специалиста.</p>
           <p class="footer-disclaimer">Есть противопоказания.<br>Необходима консультация специалиста.</p>
