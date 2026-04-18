@@ -199,6 +199,11 @@ p {
 }
 
 /* Footer logo variant — lighter colors */
+.footer .nav-logo {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
 .footer .logo-name { color: rgba(255,255,255,0.9); }
 .footer .logo-tagline { color: rgba(255,255,255,0.35); }
 
