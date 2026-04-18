@@ -36,9 +36,9 @@ function injectNav() {
   placeholder.outerHTML = `
   <nav class="nav" id="nav">
     <div class="nav-inner">
-      <a href="${b}./" class="nav-logo">
-        <img src="${b}assets/logo.svg" alt="Логотип Дубенец-Попова" class="logo-mark">
-        <div class="logo-text">
+      <a href="${b}./" class="nav-logo" style="display: flex; flex-direction: row; align-items: center; gap: 12px; text-decoration: none;">
+        <img src="${b}assets/logo.svg" alt="Логотип Дубенец-Попова" class="logo-mark" width="44" height="44" style="width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%;">
+        <div class="logo-text" style="display: flex; flex-direction: column; align-items: flex-start;">
           <span class="logo-name">Доктор <em>Дубенец-Попова</em></span>
           <span class="logo-tagline">Забота и внимание к женскому здоровью</span>
         </div>
