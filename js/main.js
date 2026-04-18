@@ -38,12 +38,20 @@ function injectNav() {
     <div class="nav-inner">
       <a href="${b}./" class="nav-logo">
         <span class="logo-name">Доктор <em>Дубенец-Попова</em></span>
-        <span class="logo-tagline">Путь к счастливому материнству</span>
+        <span class="logo-tagline">Забота и внимание к женскому здоровью</span>
       </a>
       <ul class="nav-links">
         <li><a href="${b}./">Главная</a></li>
         <li><a href="${b}about.html">Обо мне</a></li>
-        <li><a href="${b}services.html">Направления</a></li>
+        <li class="nav-dropdown">
+          <a href="${b}services.html">Направления <span class="arrow">▾</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="${b}gynecology.html">Гинекология</a></li>
+            <li><a href="${b}services.html">Акушерство</a></li>
+            <li><a href="${b}mentorship.html">Наставничество</a></li>
+            <li><a href="${b}uzi.html">УЗИ-диагностика</a></li>
+          </ul>
+        </li>
         <li><a href="${b}blog.html">Блог</a></li>
         <li><a href="${b}reviews.html">Отзывы</a></li>
         <li><a href="${b}contact.html" class="nav-cta">Связаться</a></li>
@@ -57,6 +65,12 @@ function injectNav() {
     <a href="${b}./">Главная</a>
     <a href="${b}about.html">Обо мне</a>
     <a href="${b}services.html">Направления</a>
+    <div class="mobile-sublinks">
+      <a href="${b}gynecology.html">&nbsp;&nbsp;— Гинекология</a>
+      <a href="${b}services.html">&nbsp;&nbsp;— Акушерство</a>
+      <a href="${b}mentorship.html">&nbsp;&nbsp;— Наставничество</a>
+      <a href="${b}uzi.html">&nbsp;&nbsp;— УЗИ-диагностика</a>
+    </div>
     <a href="${b}blog.html">Блог</a>
     <a href="${b}reviews.html">Отзывы</a>
     <a href="${b}contact.html" class="nav-cta">Связаться</a>
@@ -78,7 +92,7 @@ function injectFooter() {
         <div class="footer-brand">
           <a href="${b}./" class="nav-logo">
             <span class="logo-name">Доктор <em>Дубенец-Попова</em></span>
-            <span class="logo-tagline">Путь к счастливому материнству</span>
+            <span class="logo-tagline">Забота и внимание к женскому здоровью</span>
           </a>
           <p>Информационный ресурс врача акушера-гинеколога. Материалы носят просветительский характер и не заменяют консультацию специалиста.</p>
           <p class="footer-disclaimer">Есть противопоказания.<br>Необходима консультация специалиста.</p>

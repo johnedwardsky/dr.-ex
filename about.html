@@ -3,16 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Обо мне — Гинеколог Москва, семейный коуч ICF | Доктор Дубенец-Попова</title>
-  <meta name="description" content="Доктор Дубенец-Попова — кандидат медицинских наук, акушер-гинеколог с 24-летним опытом, эксперт УЗ-диагностики, семейный коуч PCC ICF. Официальный сайт врача.">
-  <meta name="keywords" content="семейный доктор официальный сайт, семейный доктор москва, гинеколог москва, семейный коуч, семейный коуч онлайн, коуч по семейным отношениям, врач акушер-гинеколог">
+  <title>Обо мне — Врач акушер-гинеколог, эксперт УЗИ | Доктор Дубенец-Попова</title>
+  <meta name="description" content="Доктор Дубенец-Попова — кандидат медицинских наук, акушер-гинеколог с 24-летним опытом, врач ультразвуковой диагностики 23 года, сертифицированный специалист по персональному сопровождению PCC ICF.">
+  <meta name="keywords" content="врач гинеколог москва, акушер-гинеколог, врач узи, кандидат медицинских наук, индивидуальное сопровождение, персональная поддержка женщин">
   <link rel="canonical" href="https://dubenets.pro/about.html">
-  <meta property="og:title" content="Обо мне — Гинеколог, семейный коуч ICF | Доктор Дубенец-Попова">
-  <meta property="og:description" content="Кандидат мед. наук, 24 года опыта. Акушер-гинеколог и сертифицированный семейный коуч PCC ICF.">
+  <meta property="og:title" content="Обо мне — Врач акушер-гинеколог | Доктор Дубенец-Попова">
+  <meta property="og:description" content="Кандидат мед. наук, 24 года опыта. Акушер-гинеколог, эксперт УЗИ, сертифицированный специалист по персональному сопровождению PCC ICF.">
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://dubenets.pro/about.html">
   <meta property="og:site_name" content="Доктор Дубенец-Попова — dubenets.pro">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="styles/main.css">
+  <style>
+    /* Certificate protection */
+    .cert-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+    .cert-card { position: relative; border-radius: 16px; overflow: hidden; border: 2px solid var(--gold-border); background: #fff; transition: all var(--transition); cursor: pointer; }
+    .cert-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(184, 151, 90, 0.15); }
+    .cert-card img { width: 100%; height: 280px; object-fit: cover; pointer-events: none; user-select: none; -webkit-user-drag: none; }
+    .cert-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 2; }
+    .cert-card .cert-label { padding: 14px 16px; text-align: center; font-size: 0.85rem; font-weight: 500; color: var(--text-primary); border-top: 1px solid var(--border); background: #faf8f6; }
+    /* Lightbox */
+    .cert-lightbox { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.85); z-index: 9999; align-items: center; justify-content: center; cursor: pointer; }
+    .cert-lightbox.active { display: flex; }
+    .cert-lightbox img { max-width: 90vw; max-height: 90vh; border-radius: 12px; pointer-events: none; user-select: none; -webkit-user-drag: none; }
+    .cert-lightbox::after { content: '✕'; position: absolute; top: 24px; right: 32px; color: #fff; font-size: 2rem; cursor: pointer; }
+    /* Facts grid */
+    .facts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .fact-card { display: flex; align-items: flex-start; gap: 16px; padding: 24px; background: #fff; border-radius: 16px; border: 1px solid var(--border); transition: all var(--transition); }
+    .fact-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+    .fact-icon { font-size: 1.6rem; flex-shrink: 0; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: var(--accent-light); border-radius: 12px; }
+    .fact-text h4 { font-family: var(--font-heading); font-size: 1rem; margin-bottom: 4px; }
+    .fact-text p { font-size: 0.88rem; margin: 0; }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -27,16 +50,17 @@
 <body>
 
   <div id="site-nav"></div>
-  <!-- Breadcrumbs -->
+
   <nav class="breadcrumbs"><div class="container">
     <a href="./">Главная</a> <span>›</span> <span class="current">Обо мне</span>
   </div></nav>
+
   <!-- Hero -->
   <section class="article-hero">
     <div class="container">
       <span class="tag">Философия и опыт</span>
-      <h1>Больше, чем врач.<br>Ваш <em>проводник</em> на пути к материнству</h1>
-      <p class="article-meta">Кандидат медицинских наук · Коуч PCC ICF · 24 года практики</p>
+      <h1>Больше, чем врач.<br>Ваша <em>надёжная опора</em> на каждом этапе</h1>
+      <p class="article-meta">Кандидат медицинских наук · Специалист PCC ICF · 24 года практики</p>
     </div>
   </section>
 
@@ -46,74 +70,157 @@
       <div class="philosophy-grid">
         <div class="philosophy-text fade-in">
           <div class="quote">
-            «Моя миссия — помочь каждой женщине пройти путь к материнству в спокойствии, доверии и профессиональной заботе»
+            «Моя миссия — помочь каждой женщине пройти свой путь в спокойствии, доверии и профессиональной заботе»
           </div>
           <p>За плечами — более двух десятилетий клинической практики: стационар, экстренная гинекология, родильный дом, амбулаторный приём.</p>
           <br>
-          <p>Сертифицированный коуч международного уровня (PCC ICF) по специализации партнёрских отношений и семейного коучинга. Это позволяет работать не только с медицинскими, но и с эмоциональными аспектами — страхами, сомнениями, семейными ценностями.</p>
+          <p>Сертифицированный специалист по персональному сопровождению международного уровня (PCC ICF). Индивидуальный формат наставничества и бережных персональных сессий: помогаю обрести ресурс, убрать тревогу и найти ответы внутри себя.</p>
         </div>
         <div class="philosophy-image fade-in">
-          <img src="assets/about-photo.jpg" alt="Профессиональный подход" onerror="this.style.display='none'">
+          <img src="assets/about-photo.jpg" alt="Доктор Дубенец-Попова" onerror="this.style.display='none'">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Qualifications -->
+  <!-- Personal Facts -->
+  <section class="section" style="background: var(--accent-light);">
+    <div class="container">
+      <div class="section-header">
+        <div class="label">О докторе</div>
+        <h2>Факты обо мне</h2>
+      </div>
+      <div class="facts-grid">
+        <div class="fact-card fade-in">
+          <div class="fact-icon">😊</div>
+          <div class="fact-text"><h4>Счастливая мама</h4><p>Знаю путь к материнству не только как врач, но и лично</p></div>
+        </div>
+        <div class="fact-card fade-in">
+          <div class="fact-icon">🩺</div>
+          <div class="fact-text"><h4>Акушер-гинеколог</h4><p>Стаж работы 24 года</p></div>
+        </div>
+        <div class="fact-card fade-in">
+          <div class="fact-icon">🔬</div>
+          <div class="fact-text"><h4>Врач УЗИ-диагностики</h4><p>Стаж 23 года — как в роддоме, так и в гинекологии</p></div>
+        </div>
+        <div class="fact-card fade-in">
+          <div class="fact-icon">🎓</div>
+          <div class="fact-text"><h4>Кандидат медицинских наук</h4><p>По специальности акушерство и гинекология</p></div>
+        </div>
+        <div class="fact-card fade-in">
+          <div class="fact-icon">🏥</div>
+          <div class="fact-text"><h4>18 лет в стационаре</h4><p>Экстренная гинекология и родильный дом</p></div>
+        </div>
+        <div class="fact-card fade-in">
+          <div class="fact-icon">📚</div>
+          <div class="fact-text"><h4>Постоянное развитие</h4><p>Индивидуальный подход и стремление к учёбе</p></div>
+        </div>
+        <div class="fact-card fade-in">
+          <div class="fact-icon">🌍</div>
+          <div class="fact-text"><h4>Международная сертификация</h4><p>Специалист по персональному сопровождению PCC ICF</p></div>
+        </div>
+        <div class="fact-card fade-in">
+          <div class="fact-icon">📈</div>
+          <div class="fact-text"><h4>Успешный инвестор</h4><p>С 2019 года</p></div>
+        </div>
+        <div class="fact-card fade-in">
+          <div class="fact-icon">🏎️</div>
+          <div class="fact-text"><h4>10 км по Формуле 1</h4><p>Пробежала по трассе F1 в 2024 году</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who I Help -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="label">Подход</div>
+        <h2>Кому я помогу</h2>
+        <p>Благодаря индивидуальному подходу я помогаю женщинам заботиться о своём здоровье комплексно — с вниманием к телу и эмоциональному состоянию</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 900px; margin: 0 auto;">
+        <div style="display: flex; gap: 12px; padding: 20px; background: #fff; border-radius: 16px; border: 1px solid var(--border);">
+          <span style="color: var(--accent); font-size: 1.2rem; flex-shrink: 0;">✓</span>
+          <p style="margin: 0;">Вы ищете профессионала, который видит не просто диагноз, а полную картину вашего состояния</p>
+        </div>
+        <div style="display: flex; gap: 12px; padding: 20px; background: #fff; border-radius: 16px; border: 1px solid var(--border);">
+          <span style="color: var(--accent); font-size: 1.2rem; flex-shrink: 0;">✓</span>
+          <p style="margin: 0;">Вас беспокоят вопросы женского здоровья, и вы хотите разобраться в них без страха и запугивания</p>
+        </div>
+        <div style="display: flex; gap: 12px; padding: 20px; background: #fff; border-radius: 16px; border: 1px solid var(--border);">
+          <span style="color: var(--accent); font-size: 1.2rem; flex-shrink: 0;">✓</span>
+          <p style="margin: 0;">Вы чувствуете фоновую тревогу или неуверенность — я помогу вернуть ресурс и стабильность</p>
+        </div>
+        <div style="display: flex; gap: 12px; padding: 20px; background: #fff; border-radius: 16px; border: 1px solid var(--border);">
+          <span style="color: var(--accent); font-size: 1.2rem; flex-shrink: 0;">✓</span>
+          <p style="margin: 0;">Вам важно, чтобы врач слушал вас, объяснял всё простым языком и был вашим партнёром</p>
+        </div>
+        <div style="display: flex; gap: 12px; padding: 20px; background: #fff; border-radius: 16px; border: 1px solid var(--border);">
+          <span style="color: var(--accent); font-size: 1.2rem; flex-shrink: 0;">✓</span>
+          <p style="margin: 0;">Вы планируете беременность или уже ждёте малыша и нуждаетесь в надёжной и поддерживающей опоре</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="number stat-number" data-target="48" data-suffix=" ч">0</span>
+          <span class="label">консультирования в неделю</span>
+        </div>
+        <div class="stat-item">
+          <span class="number stat-number" data-target="120" data-suffix="+">0</span>
+          <span class="label">первичных пациентов в месяц</span>
+        </div>
+        <div class="stat-item">
+          <span class="number stat-number" data-target="15000" data-suffix="+">0</span>
+          <span class="label">женщин доверили здоровье</span>
+        </div>
+        <div class="stat-item">
+          <span class="number">18 лет</span>
+          <span class="label">в стационаре и экстренной гинекологии</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates -->
   <section class="section" style="background: var(--accent-light);">
     <div class="container">
       <div class="section-header">
         <div class="label">Квалификация</div>
-        <h2>Образование и сертификаты</h2>
+        <h2>Документы и сертификаты</h2>
+        <p>Нажмите на документ для увеличения</p>
       </div>
-      <div class="cards-grid">
-        <div class="card fade-in">
-          <div class="card-icon">🎓</div>
-          <h3>Высшее медицинское</h3>
-          <p>Медицинская академия, факультет лечебного дела. Интернатура по акушерству, гинекологии и ультразвуковой диагностике.</p>
+      <div class="cert-gallery" oncontextmenu="return false;" ondragstart="return false;">
+        <div class="cert-card" onclick="openCert(this)">
+          <img src="assets/certs/cert-medical.jpg" alt="Высшее медицинское образование" draggable="false" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22280%22><rect fill=%22%23f5f0eb%22 width=%22300%22 height=%22280%22/><text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 fill=%22%23a68b7b%22 font-size=%2236%22>🎓</text></svg>'">
+          <div class="cert-label">Высшее медицинское образование</div>
         </div>
-        <div class="card fade-in">
-          <div class="card-icon">🔬</div>
-          <h3>Кандидат медицинских наук</h3>
-          <p>Защита кандидатской диссертации на базе Национальной медицинской академии последипломного образования.</p>
+        <div class="cert-card" onclick="openCert(this)">
+          <img src="assets/certs/cert-uzi.jpg" alt="Сертификат УЗ-диагностики" draggable="false" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22280%22><rect fill=%22%23f5f0eb%22 width=%22300%22 height=%22280%22/><text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 fill=%22%23a68b7b%22 font-size=%2236%22>🔬</text></svg>'">
+          <div class="cert-label">Сертификат УЗ-диагностики</div>
         </div>
-        <div class="card fade-in">
-          <div class="card-icon">📋</div>
-          <h3>УЗ-диагностика</h3>
-          <p>Сертифицированный специалист ультразвуковой диагностики. 21 год практического опыта в УЗИ-исследованиях.</p>
+        <div class="cert-card" onclick="openCert(this)">
+          <img src="assets/certs/cert-phd.jpg" alt="Диплом кандидата медицинских наук" draggable="false" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22280%22><rect fill=%22%23f5f0eb%22 width=%22300%22 height=%22280%22/><text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 fill=%22%23a68b7b%22 font-size=%2236%22>🎓</text></svg>'">
+          <div class="cert-label">Диплом кандидата медицинских наук</div>
         </div>
-        <div class="card fade-in">
-          <div class="card-icon">🧠</div>
-          <h3>Коуч PCC ICF</h3>
-          <p>Сертифицированный коуч международного уровня. Академия нейрокоучинга, 12 месяцев обучения. Специализация: семья и партнёрские отношения.</p>
+        <div class="cert-card" onclick="openCert(this)">
+          <img src="assets/certs/cert-icf.jpg" alt="Сертификат PCC ICF" draggable="false" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22280%22><rect fill=%22%23f5f0eb%22 width=%22300%22 height=%22280%22/><text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 fill=%22%23a68b7b%22 font-size=%2236%22>🌍</text></svg>'">
+          <div class="cert-label">Сертификат PCC ICF</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Experience -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <div class="label">Опыт</div>
-        <h2>Ключевые цифры</h2>
-      </div>
-      <div class="cards-grid" style="max-width: 1050px; margin: 0 auto;">
-        <div class="card fade-in" style="text-align:center;">
-          <h3 style="font-size:2.4rem; color:var(--accent);">с 2002</h3>
-          <p style="margin:0 auto;">года в акушерстве и гинекологии</p>
-        </div>
-        <div class="card fade-in" style="text-align:center;">
-          <h3 style="font-size:2.4rem; color:var(--accent);">21 год</h3>
-          <p style="margin:0 auto;">в УЗ-диагностике</p>
-        </div>
-        <div class="card fade-in" style="text-align:center;">
-          <h3 style="font-size:2.4rem; color:var(--accent);">18 лет</h3>
-          <p style="margin:0 auto;">в стационаре и экстренной гинекологии</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Certificate Lightbox -->
+  <div class="cert-lightbox" id="certLightbox" onclick="closeCert()" oncontextmenu="return false;">
+    <img id="certLightboxImg" src="" alt="Сертификат" draggable="false">
+  </div>
 
   <!-- CTA -->
   <section class="cta-section">
@@ -127,9 +234,21 @@
     </div>
   </section>
 
-
   <div id="site-footer"></div>
 
   <script src="js/main.js"></script>
+  <script>
+    function openCert(card) {
+      const img = card.querySelector('img');
+      document.getElementById('certLightboxImg').src = img.src;
+      document.getElementById('certLightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeCert() {
+      document.getElementById('certLightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCert(); });
+  </script>
 </body>
 </html>
