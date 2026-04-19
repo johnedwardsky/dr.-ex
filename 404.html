@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Страница не найдена (404) | Доктор Дубенец-Попова</title>
+  <meta name="description" content="Запрашиваемая страница не найдена.">
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+  <script>
+    // Флаг для js/main.js, чтобы генерировать абсолютные пути от корня
+    window.__is404 = true;
+  </script>
+  <style>
+    .error-section {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 20px 80px;
+    }
+    .error-code {
+      font-family: var(--font-heading);
+      font-size: clamp(6rem, 15vw, 10rem);
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 24px;
+      opacity: 0.8;
+    }
+    .error-section h1 {
+      margin-bottom: 16px;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+    }
+    .error-section p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 500px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
+    }
+    .error-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="site-nav"></div>
+
+  <section class="error-section fade-in">
+    <div class="container">
+      <div class="error-code">404</div>
+      <h1>Страница не найдена</h1>
+      <p>К сожалению, страница, которую вы ищете, не существует, была перемещена или временно недоступна.</p>
+      <div class="error-actions">
+        <a href="/" class="btn-primary">Вернуться на главную</a>
+        <a href="/services.html" class="btn-outline">Мои услуги</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

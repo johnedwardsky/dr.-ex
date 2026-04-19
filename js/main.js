@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
    ОПРЕДЕЛЕНИЕ БАЗОВОГО ПУТИ — для подпапок (blog/ и др.)
    ============================================================ */
 function getBase() {
+  if (window.__is404) return '/';
   const scripts = document.querySelectorAll('script[src*="main.js"]');
   for (const s of scripts) {
     const src = s.getAttribute('src');
