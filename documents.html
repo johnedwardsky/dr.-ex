@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Документы — dubenets.pro</title>
+  <meta name="description" content="Официальные документы, лицензии и машиночитаемые доверенности врача акушера-гинеколога.">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .docs-page {
+      padding: 120px 0 80px;
+      min-height: 80vh;
+    }
+    .docs-page .container {
+      max-width: 900px;
+    }
+    .docs-header {
+      margin-bottom: 48px;
+      text-align: center;
+    }
+    .docs-header h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--text-primary);
+      margin-bottom: 16px;
+    }
+    .docs-header p {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .docs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+
+    .doc-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+    .doc-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(111,78,55,0.08);
+      border-color: var(--gold);
+    }
+    .doc-icon {
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+    }
+    .doc-card h3 {
+      font-size: 1.2rem;
+      color: var(--text-primary);
+      margin: 0;
+      line-height: 1.4;
+    }
+    .doc-card p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin: 0;
+      flex-grow: 1;
+    }
+    .doc-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 12px 0;
+      border-top: 1px solid var(--border);
+      margin-top: 8px;
+    }
+    .doc-link:hover {
+      color: var(--accent-dark);
+    }
+
+    .mchd-section {
+      background: var(--accent-light);
+      border-radius: 24px;
+      padding: 40px;
+      margin-top: 60px;
+    }
+    .mchd-section h2 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+      color: var(--accent-dark);
+    }
+    .mchd-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .mchd-item {
+      background: #fff;
+      padding: 24px;
+      border-radius: 16px;
+      border: 1px solid var(--gold-border);
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .mchd-item-info h4 {
+      margin: 0 0 4px 0;
+      font-size: 1.05rem;
+    }
+    .mchd-item-info p {
+      margin: 0;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+      background: var(--gold-light);
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    .btn-download:hover {
+      background: var(--gold-border);
+    }
+
+    @media (max-width: 600px) {
+      .docs-page { padding-top: 100px; }
+      .mchd-section { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="site-nav"></div>
+
+  <main class="docs-page">
+    <div class="container">
+      
+      <div class="docs-header fade-in">
+        <div class="label">Официально</div>
+        <h1>Документы</h1>
+        <p>На этой странице представлены официальные лицензии, свидетельства и документы, подтверждающие квалификацию и право на осуществление деятельности.</p>
+      </div>
+
+      <div class="docs-grid">
+        <!-- Лицензия -->
+        <div class="doc-card fade-in">
+          <div class="doc-icon">📜</div>
+          <h3>Медицинская лицензия</h3>
+          <p>Лицензия на осуществление медицинской деятельности по специальностям «Акушерство и гинекология», «Ультразвуковая диагностика».</p>
+          <a href="#" class="doc-link">Открыть PDF <span>→</span></a>
+        </div>
+
+        <!-- Диплом -->
+        <div class="doc-card fade-in">
+          <div class="doc-icon">🎓</div>
+          <h3>Диплом КМН</h3>
+          <p>Диплом кандидата медицинских наук, выданный Высшей аттестационной комиссией.</p>
+          <a href="#" class="doc-link">Открыть PDF <span>→</span></a>
+        </div>
+
+        <!-- Сертификат Коуча -->
+        <div class="doc-card fade-in">
+          <div class="doc-icon">🎗️</div>
+          <h3>Сертификат PCC ICF</h3>
+          <p>Международный сертификат профессионального коуча уровня Professional Certified Coach (PCC).</p>
+          <a href="#" class="doc-link">Открыть PDF <span>→</span></a>
+        </div>
+      </div>
+
+      <!-- Раздел МЧД (из запроса пользователя) -->
+      <section class="mchd-section fade-in">
+        <h2>Машиночитаемые доверенности (МЧД)</h2>
+        <p style="margin-bottom: 24px; color: var(--text-secondary);">Для обеспечения юридически значимого электронного документооборота и уведомления Роскомнадзора об обработке персональных данных.</p>
+        
+        <div class="mchd-grid">
+          <!-- XML MCHD -->
+          <div class="mchd-item">
+            <div style="font-size: 1.5rem;">📄</div>
+            <div class="mchd-item-info">
+              <h4>XML файл МЧД</h4>
+              <p>Машиночитаемая доверенность в формате XML для государственных порталов.</p>
+              <a href="assets/docs/mchd_dubenets.xml" class="btn-download" download>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                Скачать XML
+              </a>
+            </div>
+          </div>
+
+          <!-- SIG MCHD -->
+          <div class="mchd-item">
+            <div style="font-size: 1.5rem;">🔏</div>
+            <div class="mchd-item-info">
+              <h4>SIG файл подписи</h4>
+              <p>Файл усиленной квалифицированной электронной подписи (УКЭП) к доверенности.</p>
+              <a href="assets/docs/mchd_dubenets.xml.sig" class="btn-download" download>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                Скачать SIG
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div style="margin-top: 60px; text-align: center;" class="fade-in">
+        <p style="font-size: 0.9rem; color: var(--text-secondary);">Если у вас возникли вопросы по документам, пожалуйста, <a href="contact.html" style="color: var(--gold); text-decoration: none; font-weight: 600;">свяжитесь со мной</a>.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
